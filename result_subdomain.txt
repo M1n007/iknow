@@ -1,0 +1,5 @@
+imap.sad.com => found!
+sems.sad.com => found!
+mail.sad.com => found!
+www.sap.sad.com => found!
+www.sad.com => found!

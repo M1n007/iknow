@@ -1,0 +1,30 @@
+{
+  "name": "iknow",
+  "version": "1.0.0",
+  "description": "This for search subdomain of website",
+  "main": "sad.js",
+  "scripts": {
+    "test": "node sad.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/M1n007/iknow.git"
+  },
+  "keywords": [
+    "tools",
+    "hack",
+    "hacking"
+  ],
+  "author": "M1n007",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/M1n007/iknow/issues"
+  },
+  "homepage": "https://github.com/M1n007/iknow#readme",
+  "dependencies": {
+    "async-file": "^2.0.2",
+    "chalk": "^2.4.1",
+    "node-fetch": "^2.2.0",
+    "readline-sync": "^1.4.9"
+  }
+}
