@@ -24,7 +24,9 @@
   "dependencies": {
     "async-file": "^2.0.2",
     "chalk": "^2.4.1",
+    "express": "^4.16.4",
     "node-fetch": "^2.2.0",
-    "readline-sync": "^1.4.9"
+    "readline-sync": "^1.4.9",
+    "request": "^2.88.0"
   }
 }
