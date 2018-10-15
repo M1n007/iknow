@@ -22,9 +22,9 @@ welcome to
 `
 ))
 
-async function getSubdomain(){
+function getSubdomain(){
 
-    var url = await readline.question('masukan url example facebook.com tanpa http/https : ')
+    var url = readline.question('masukan url example facebook.com tanpa http/https : ')
 
     var siheaders = { 
         'x-session-hash' : '16961ee14a95fae7bbfe69587dcca2adf647b7022e88ec6167edec568e4c69d3' 
@@ -33,7 +33,7 @@ async function getSubdomain(){
     console.log("======="+" "+"DOMAIN : "+url+" "+"=======")
     console.log("\n")
  
-    await fetch('http://35.197.130.171/?domain='+url,{
+    fetch('http://35.197.130.171/?domain='+url,{
         method:'GET',
         headers:siheaders,
     })
