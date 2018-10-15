@@ -33,7 +33,7 @@ async function getSubdomain(){
     console.log("======="+" "+"DOMAIN : "+url+" "+"=======")
     console.log("\n")
  
-    await fetch('https://www.virustotal.com/ui/domains/'+url+'/subdomains',{
+    await fetch('http://35.197.130.171/?domain='+url,{
         method:'GET',
         headers:siheaders,
     })
