@@ -3,6 +3,7 @@ var fetch = require('node-fetch');
 var chalk = require('chalk');
 var readline = require('readline-sync')
 const fs = require('async-file');
+var request = require('request');
 
 console.log(chalk.red(
     `
@@ -29,17 +30,25 @@ function getSubdomain(){
     console.log("\n")
     console.log("======="+" "+"DOMAIN : "+url+" "+"=======")
     console.log("\n")
- 
-    fetch('http://35.197.130.171/?domain='+url,{
-        method:'GET',
-    })
-    .then(response => response.json())
-    .then(res => {
-        res.data.map(datas => {
+
+    request({'url':'http://35.197.130.171/?domain='+url, 'json': true }, function ( error, response, body) {
+        // console.log(JSON.stringify(body.data))
+        body.data.map(datas => {
             console.log("=>"+" "+chalk.green(datas.id))
             fs.appendFile('result_subdomain.txt', `${datas.id} => found!\n`, 'utf-8');
         })
     })
+ 
+    // fetch('http://35.197.130.171/?domain='+url,{
+    //     method:'GET',
+    // })
+    // .then(response => response.json())
+    // .then(res => {
+    //     res.data.map(datas => {
+    //         console.log("=>"+" "+chalk.green(datas.id))
+    //         fs.appendFile('result_subdomain.txt', `${datas.id} => found!\n`, 'utf-8');
+    //     })
+    // })
 
     console.log("result saved => result_subdomain.txt")
 
